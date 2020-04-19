@@ -7,7 +7,7 @@ Feature: Homepage Tests
   Background:
     Given I land on amazon homepage
 
-  @envall
+  @envall  @amazon11
   Scenario: Amazon logo link and search results field is present on homepage
     Then I should see amazon logo with link
     And I should see search results field with search button

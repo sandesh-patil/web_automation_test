@@ -1,6 +1,5 @@
 package com.amazon.pages.homepage;
 
-import cucumber.api.java.en.Given;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,11 +35,6 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
-
-//    public String getPageTitle() {
-//        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(logoLink));
-//        return driver.getTitle();
-//    }
 
     public WebElement getLogoLink() {
         new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(searchField));
@@ -100,10 +94,6 @@ public class HomePage {
         new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(addToCartButton));
         return driver.findElement(addToCartButton);
     }
-
-//    public String getNavCartCount() {
-//        return driver.findElement(navCartCount).getText();
-//    }
 
     public WebElement proceedToCheckOutButton() {
         new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(proceedToChkoutButton));

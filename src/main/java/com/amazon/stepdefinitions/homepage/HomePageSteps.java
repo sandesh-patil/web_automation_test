@@ -3,7 +3,6 @@ package com.amazon.stepdefinitions.homepage;
 import com.amazon.common.DataHelper;
 import com.amazon.pages.homepage.HomePage;
 import com.amazon.stepdefinitions.Hooks;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -77,7 +76,6 @@ public class HomePageSteps {
 
     @Then("^I should get the item added to my cart as expected$")
     public void iShouldGetTheItemAddedToMyCartAsExpected() {
-//        Assert.assertFalse("Nav cart count is not displayed correct at right top corner", homePage.getNavCartCount().isEmpty());
         Assert.assertTrue("Proceed to checkout Button is Not displaying", homePage.proceedToCheckOutButton().isDisplayed());
         Assert.assertTrue("Added to cart element Not displaying ", homePage.addedToCartDisplay().isDisplayed());
     }

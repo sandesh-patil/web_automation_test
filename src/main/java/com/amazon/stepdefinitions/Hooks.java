@@ -11,6 +11,7 @@ import java.util.Collections;
 public class Hooks {
     public static WebDriver driver;
 
+
     @Before
     /**
      * Delete all cookies at the start of each scenario to avoid

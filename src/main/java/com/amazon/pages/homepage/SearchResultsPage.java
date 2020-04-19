@@ -13,13 +13,10 @@ public class SearchResultsPage {
     public WebDriver driver;
 
     private final By searchField = By.cssSelector("input#twotabsearchtextbox");
-//    private final By searchListItems = By.xpath("//a[contains(@class,'a-link-normal a-text-normal')]");
     private final By searchListSections = By.cssSelector("div.sg-col-inner");
     private final By searchedItems = By.cssSelector("div.a-section .a-spacing-none");
     private final By searchBlock = By.cssSelector("div#search");
-//    private final By searchedItems = By.cssSelector("div.a-section .a-spacing-none");
     private final By productTitle = By.cssSelector("span#productTitle");
-//    private static String itemSelected = "";
 
     /**
      * Constructor to initialise the driver
@@ -36,15 +33,6 @@ public class SearchResultsPage {
         int randonItem = rand.nextInt(allItems.size());
         allItems.get(randonItem).click();
     }
-
-//    public String getItemSelected() {
-//
-//        List<WebElement> allItems = driver.findElements(searchListSections);
-//        Random rand = new Random();
-//        int randonItem = rand.nextInt(allItems.size());
-//        itemSelected = String.valueOf(randonItem);
-//        return itemSelected;
-//    }
 
     public String getProductTitle() {
         return driver.findElement(productTitle).getText();
