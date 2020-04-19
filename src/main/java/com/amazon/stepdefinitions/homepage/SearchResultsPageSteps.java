@@ -9,5 +9,4 @@ public class SearchResultsPageSteps {
     HomePage homePage;
     SearchResultsPage searchResultsPage;
 
-
 }

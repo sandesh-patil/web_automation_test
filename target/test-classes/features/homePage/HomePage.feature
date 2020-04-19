@@ -7,7 +7,7 @@ Feature: Homepage Tests
   Background:
     Given I land on amazon homepage
 
-  @envall  @amazon11
+  @envall
   Scenario: Amazon logo link and search results field is present on homepage
     Then I should see amazon logo with link
     And I should see search results field with search button
@@ -19,8 +19,8 @@ Feature: Homepage Tests
     Then I should see the correct search results list displayed
 
     Examples:
-      | searchKeyword   |
-      | Sony 55 inch TV |
+      | searchKeyword |
+      | 1             |
 
   @priority @envall
   Scenario Outline: Verify user can perform search items from the search field in homepage
@@ -30,8 +30,8 @@ Feature: Homepage Tests
     Then I see the detail page opened for the selected item
 
     Examples:
-      | searchKeyword   |
-      | Sony 55 inch TV |
+      | searchKeyword |
+      | 1             |
 
   @priority @envall
   Scenario Outline: Verify user can search for an item and add to cart
@@ -42,8 +42,8 @@ Feature: Homepage Tests
     Then I should get the item added to my cart as expected
 
     Examples:
-      | searchKeyword   |
-      | Sony 55 inch TV |
+      | searchKeyword |
+      | 1             |
 
   @priority @envall
   Scenario Outline: Verify user can proceed to checkout and purchase the item selected
@@ -58,5 +58,5 @@ Feature: Homepage Tests
     Then I should see a success message with correct purchase details
 
     Examples:
-      | searchKeyword   | username      | password |
-      | Sony 55 inch TV | xyz@gmail.com | test551  |
+      | searchKeyword | username      | password |
+      | 1             | xyz@gmail.com | test551  |

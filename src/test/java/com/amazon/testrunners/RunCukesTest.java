@@ -1,14 +1,11 @@
 package com.amazon.testrunners;
 
-
 import com.github.mkolisnyk.cucumber.runner.ExtendedCucumber;
 import com.github.mkolisnyk.cucumber.runner.ExtendedCucumberOptions;
 import com.vimalselvam.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-
-import java.io.IOException;
 
 @ExtendedCucumberOptions(
         retryCount = 0,
@@ -19,7 +16,8 @@ import java.io.IOException;
         outputFolder = "target/extendedCucumber/")
 
 @CucumberOptions(
-        plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/extent-report/report.html"},
+        plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/extent-report/report.html",
+                  "html:target/cucumber-reports/screenshots"},
         features = {"src/test/resources/features"},
 
         glue = {"classpath:com.amazon.stepdefinitions"},
@@ -29,8 +27,7 @@ import java.io.IOException;
 @RunWith(ExtendedCucumber.class)
 public class RunCukesTest {
     @AfterClass
-    public static void writeExtentReport() throws IOException {
+    public static void writeExtentReport() {
         Reporter.loadXMLConfig("src/test/resources/extent-config.xml");
-        Reporter.addScreenCaptureFromPath("target/extent-report/report.html");
     }
 }

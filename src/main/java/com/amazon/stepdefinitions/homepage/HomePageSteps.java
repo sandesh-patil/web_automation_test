@@ -1,6 +1,5 @@
 package com.amazon.stepdefinitions.homepage;
 
-import com.amazon.common.DataHelper;
 import com.amazon.pages.homepage.HomePage;
 import com.amazon.stepdefinitions.Hooks;
 import cucumber.api.java.en.And;
@@ -10,20 +9,27 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 
 public class HomePageSteps {
     public static WebDriver driver;
     HomePage homePage;
-    DataHelper dataHelper;
+    Properties prop = new Properties();
+
 
     public HomePageSteps() {
         driver = Hooks.driver;
     }
 
     @Given("^I land on amazon homepage$")
-    public void iLandOnAmazonHomepage() {
-        String url = "https://www.amazon.com.au/";
-//        String url = "config/url.yml/homepage_url";
+    public void iLandOnAmazonHomepage() throws IOException {
+        InputStream inputStream = new FileInputStream("src/test/resources/config.properties");
+        prop.load(inputStream);
+        String url = prop.getProperty("testUrl");
         driver.get(url);
     }
 
@@ -42,10 +48,9 @@ public class HomePageSteps {
     }
 
     @When("^I enter a search item text as \"([^\"]*)\" in the input field$")
-    public void iEnterASearchItemTextAsInTheInputField(String searchKeyword) {
+    public void iEnterASearchItemTextAsInTheInputField(int searchKeyword) throws IOException {
         homePage = new HomePage(driver);
-        homePage.getSearchField().click();
-        homePage.getSearchField().sendKeys(searchKeyword);
+        homePage.enterDataInSearchField(searchKeyword);
     }
 
     @And("^I click on the submit search button$")

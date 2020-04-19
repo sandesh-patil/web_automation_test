@@ -117,7 +117,7 @@ Important Information
 	git pull origin master (this is to get the latest version from master)  
 	git checkout <branch-name>  
 	git push or pull to make sure you have the latest version in your branch as well.  
-	git rebase master (resolve any conflits)  
+	git rebase master (resolve any conflicts)  
 	git push origin <branch-name> (use -f for the force push if there has been changes made to commit comments or you have squashed commits)  
 
 
