@@ -21,12 +21,16 @@ public class HomePage {
     private final By searchedLinks = By.cssSelector(".a-link-normal .a-text-normal");
     private final By productTitle = By.cssSelector("span#productTitle");
     private final By searchItemText = By.cssSelector("span.a-size-medium.a-color-base.a-text-normal");
+    private final By addToCartButton = By.cssSelector("input#add-to-cart-button");
+    private final By navCartCount = By.cssSelector("span#nav-cart-count");
+    private final By proceedToChkoutButton = By.cssSelector("a#hlb-ptc-btn-native");
+    private final By addedToCartItemDisplay = By.cssSelector("div#huc-v2-order-row-messages");
     public static String itemSelected = "";
-
 
 
     /**
      * Constructor to initialise the driver
+     *
      * @param driver
      */
     public HomePage(WebDriver driver) {
@@ -60,8 +64,8 @@ public class HomePage {
 
     public boolean isSearchItemsDisplayed() {
         new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(searchListItems));
-        if (driver.findElements(searchListItems).size() >= 1 ) {
-            return  true;
+        if (driver.findElements(searchListItems).size() >= 1) {
+            return true;
         }
         return false;
     }
@@ -79,8 +83,7 @@ public class HomePage {
         return driver.findElement(productTitle).getText();
     }
 
-        public String getItemSelected() {
-
+    public String getItemSelected() {
         List<WebElement> allItems = driver.findElements(searchItemText);
         Random rand = new Random();
         int randomItem = rand.nextInt(20);
@@ -89,8 +92,25 @@ public class HomePage {
     }
 
     public Boolean isProductTitleDisplayed() {
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(productTitle));
         return driver.findElement(productTitle).isDisplayed();
     }
 
+    public WebElement addToCartButton() {
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(addToCartButton));
+        return driver.findElement(addToCartButton);
+    }
 
+//    public String getNavCartCount() {
+//        return driver.findElement(navCartCount).getText();
+//    }
+
+    public WebElement proceedToCheckOutButton() {
+        new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(proceedToChkoutButton));
+        return driver.findElement(proceedToChkoutButton);
+    }
+
+    public WebElement addedToCartDisplay() {
+        return driver.findElement(addedToCartItemDisplay);
+    }
 }

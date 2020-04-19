@@ -38,8 +38,25 @@ Feature: Homepage Tests
     When I enter a search item text as "<searchKeyword>" in the input field
     And I click on the submit search button
     And I select a random item from the search list page
-    Then I see the detail page opened for the selected item
+    And I click on add to cart button from the selected items detail page
+    Then I should get the item added to my cart as expected
 
     Examples:
       | searchKeyword   |
       | Sony 55 inch TV |
+
+  @priority @envall
+  Scenario Outline: Verify user can proceed to checkout and purchase the item selected
+    And I enter a search item text as "<searchKeyword>" in the input field
+    And I click on the submit search button
+    And I select a random item from the search list page
+    And I click on add to cart button from the selected items detail page
+    And I click on proceed to checkout button from added to cart detail page
+    And I login to my account with "<username>" and "<password>"
+    And I enter details of my card in the fields to make purchase
+    When I click submit to purchase button
+    Then I should see a success message with correct purchase details
+
+    Examples:
+      | searchKeyword   | username      | password |
+      | Sony 55 inch TV | xyz@gmail.com | test551  |

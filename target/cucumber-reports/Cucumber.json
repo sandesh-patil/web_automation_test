@@ -1,0 +1,699 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4826005402,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I land on amazon homepage",
+            "match": {
+              "location": "HomePageSteps.iLandOnAmazonHomepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2107663952,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Amazon logo link and search results field is present on homepage",
+        "description": "",
+        "id": "homepage-tests;amazon-logo-link-and-search-results-field-is-present-on-homepage",
+        "after": [
+          {
+            "result": {
+              "duration": 129365467,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 911438792,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should see amazon logo with link",
+            "match": {
+              "location": "HomePageSteps.iShouldSeeAmazonLogoWithLink()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 120325338,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I should see search results field with search button",
+            "match": {
+              "location": "HomePageSteps.iShouldSeeSearchResultsFieldWithSearchButton()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@envall"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9776957600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I land on amazon homepage",
+            "match": {
+              "location": "HomePageSteps.iLandOnAmazonHomepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1622026125,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Verify user can perform search items from the search field in homepage",
+        "description": "",
+        "id": "homepage-tests;verify-user-can-perform-search-items-from-the-search-field-in-homepage;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 110402895,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 323191400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I enter a search item text as \"Sony 55 inch TV\" in the input field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sony 55 inch TV",
+                  "offset": 31
+                }
+              ],
+              "location": "HomePageSteps.iEnterASearchItemTextAsInTheInputField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 852237431,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I click on the submit search button",
+            "match": {
+              "location": "HomePageSteps.iClickOnTheSubmitSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2541769260,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I should see the correct search results list displayed",
+            "match": {
+              "location": "HomePageSteps.iShouldSeeTheCorrectSearchResultsListDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@priority"
+          },
+          {
+            "line": 1,
+            "name": "@homepage"
+          },
+          {
+            "line": 1,
+            "name": "@amazon"
+          },
+          {
+            "line": 1,
+            "name": "@envall"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11993345596,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I land on amazon homepage",
+            "match": {
+              "location": "HomePageSteps.iLandOnAmazonHomepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1731239409,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Verify user can perform search items from the search field in homepage",
+        "description": "",
+        "id": "homepage-tests;verify-user-can-perform-search-items-from-the-search-field-in-homepage;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 104963429,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 316038377,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I enter a search item text as \"Sony 55 inch TV\" in the input field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sony 55 inch TV",
+                  "offset": 31
+                }
+              ],
+              "location": "HomePageSteps.iEnterASearchItemTextAsInTheInputField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 771936752,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I click on the submit search button",
+            "match": {
+              "location": "HomePageSteps.iClickOnTheSubmitSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1416579406,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I select a random item from the search list page",
+            "match": {
+              "location": "HomePageSteps.iSelectARandomItemFromTheSearchListPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 587104524,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I see the detail page opened for the selected item",
+            "match": {
+              "location": "HomePageSteps.iSeeTheDetailPageOpenedForTheSelectedItem()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@priority"
+          },
+          {
+            "line": 1,
+            "name": "@homepage"
+          },
+          {
+            "line": 1,
+            "name": "@amazon"
+          },
+          {
+            "line": 1,
+            "name": "@envall"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11655418187,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I land on amazon homepage",
+            "match": {
+              "location": "HomePageSteps.iLandOnAmazonHomepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1724600776,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 46,
+        "name": "Verify user can search for an item and add to cart",
+        "description": "",
+        "id": "homepage-tests;verify-user-can-search-for-an-item-and-add-to-cart;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 117119947,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 304667189,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "I enter a search item text as \"Sony 55 inch TV\" in the input field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sony 55 inch TV",
+                  "offset": 31
+                }
+              ],
+              "location": "HomePageSteps.iEnterASearchItemTextAsInTheInputField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3512503323,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I click on the submit search button",
+            "match": {
+              "location": "HomePageSteps.iClickOnTheSubmitSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1388082078,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I select a random item from the search list page",
+            "match": {
+              "location": "HomePageSteps.iSelectARandomItemFromTheSearchListPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3868949539,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I click on add to cart button from the selected items detail page",
+            "match": {
+              "location": "HomePageSteps.iClickOnAddToCartButtonFromTheSelectedItemsDetailPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72893772,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I should get the item added to my cart as expected",
+            "match": {
+              "location": "HomePageSteps.iShouldGetTheItemAddedToMyCartAsExpected()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@priority"
+          },
+          {
+            "line": 1,
+            "name": "@homepage"
+          },
+          {
+            "line": 1,
+            "name": "@amazon"
+          },
+          {
+            "line": 1,
+            "name": "@envall"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6939401225,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I land on amazon homepage",
+            "match": {
+              "location": "HomePageSteps.iLandOnAmazonHomepage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1749669319,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 62,
+        "name": "Verify user can proceed to checkout and purchase the item selected",
+        "description": "",
+        "id": "homepage-tests;verify-user-can-proceed-to-checkout-and-purchase-the-item-selected;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 172876720,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 281678086,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I enter a search item text as \"Sony 55 inch TV\" in the input field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sony 55 inch TV",
+                  "offset": 31
+                }
+              ],
+              "location": "HomePageSteps.iEnterASearchItemTextAsInTheInputField(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6565588419,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I click on the submit search button",
+            "match": {
+              "location": "HomePageSteps.iClickOnTheSubmitSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3189363866,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "I select a random item from the search list page",
+            "match": {
+              "location": "HomePageSteps.iSelectARandomItemFromTheSearchListPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1178162603,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "I click on add to cart button from the selected items detail page",
+            "match": {
+              "location": "HomePageSteps.iClickOnAddToCartButtonFromTheSelectedItemsDetailPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19637,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I click on proceed to checkout button from added to cart detail page",
+            "match": {
+              "location": "HomePageSteps.iClickOnProceedToCheckoutButtonFromAddedToCartDetailPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 94080,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I login to my account with \"xyz@gmail.com\" and \"test551\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "xyz@gmail.com",
+                  "offset": 28
+                },
+                {
+                  "val": "test551",
+                  "offset": 48
+                }
+              ],
+              "location": "HomePageSteps.iLoginToMyAccountWithAnd(String,String)"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17891,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I enter details of my card in the fields to make purchase",
+            "match": {
+              "location": "HomePageSteps.iEnterDetailsOfMyCardInTheFieldsToMakePurchase()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26744,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I click submit to purchase button",
+            "match": {
+              "location": "HomePageSteps.iClickSubmitToPurchaseButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76357,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "I should see a success message with correct purchase details",
+            "match": {
+              "location": "HomePageSteps.iShouldSeeASuccessMessageWithCorrectPurchaseDetails()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@priority"
+          },
+          {
+            "line": 1,
+            "name": "@homepage"
+          },
+          {
+            "line": 1,
+            "name": "@amazon"
+          },
+          {
+            "line": 1,
+            "name": "@envall"
+          }
+        ]
+      }
+    ],
+    "name": "Homepage Tests",
+    "description": "\nAs a user\nI can see and use homepage functions to search and purchase items of My interest",
+    "id": "homepage-tests",
+    "keyword": "Feature",
+    "uri": "homePage/HomePage.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@envall"
+      },
+      {
+        "line": 1,
+        "name": "@homepage"
+      },
+      {
+        "line": 1,
+        "name": "@priority"
+      },
+      {
+        "line": 1,
+        "name": "@amazon"
+      }
+    ]
+  }
+]
